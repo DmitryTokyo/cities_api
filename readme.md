@@ -1,6 +1,7 @@
 # REST API Cities application
 
-This REST API provides the handler for showing, saving, fetching and managing city data.
+This REST API provides the handler for showing, saving, fetching and managing city data. The application was implemented by test task documentation
+for the vacancy of python developer.
 
 ## Get started
 For launch this application you should be installed following requirements:
