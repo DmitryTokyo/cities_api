@@ -12,6 +12,7 @@ from cities.utils.handle_city_query import get_closest_cities_qs
 
 
 class CitiesListView(ListAPIView):
+    queryset = City.objects
 
     def get(self, request: Request, **kwargs: Mapping) -> Response:
         cities_ids = get_closest_cities_qs(request.query_params)
