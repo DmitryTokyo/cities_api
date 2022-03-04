@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'rest_framework',
+    'drf_yasg',
 
     'cities',
 ]
