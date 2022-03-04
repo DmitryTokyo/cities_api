@@ -6,6 +6,7 @@ django-extensions==3.1.5
 djangorestframework==3.13.1
 geocoder==1.38.1
 geopy==2.2.0
+drf-yasg-1.20.0
 
 flake8==4.0.1
 flake8-2020==1.6.0

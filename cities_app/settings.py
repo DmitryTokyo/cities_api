@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'rest_framework',
+    'drf_yasg',
 
     'cities',
 ]
@@ -120,6 +121,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GOOGLE_API_KEY = env('GOOGLE_API_KEY')
-GOOGLE_ELEVATION_API_KEY = env('GOOGLE_ELEVATION_API_KEY')
-YANDEX_API_KEY = env('YANDEX_API_KEY')
+GOOGLE_API_KEY = env('GOOGLE_API_KEY', default='google_key')
+GOOGLE_ELEVATION_API_KEY = env('GOOGLE_ELEVATION_API_KEY', default='google_elevation_key')
+YANDEX_API_KEY = env('YANDEX_API_KEY', default='yandex_key')
