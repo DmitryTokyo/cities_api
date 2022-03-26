@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'rest_framework',
-    'drf_yasg',
+    'drf_spectacular',
 
     'cities',
 ]
@@ -46,6 +46,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'City Project API',
+    'DESCRIPTION': 'Simple API example',
+    'VERSION': '1.0.0',
+}
 
 ROOT_URLCONF = 'cities_app.urls'
 
