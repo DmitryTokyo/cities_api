@@ -1,11 +1,12 @@
 # REST API Cities application
 
-This REST API provides the handler for showing, saving, fetching and managing city data.
+This REST API provides the handler for showing, saving, fetching and managing city data. The application was implemented by test task documentation
+for the vacancy of python developer.
 
 ## Get started
 For launch this application you should be installed following requirements:
 - Programming language is [Python 3.10.0](https://www.python.org/downloads/release/python-3100/).
-- All dependencies install from `pip install -r requirements/requirements.txt ----use-deprecated=legacy-resolver`.
+- All dependencies install from `pip install -r requirements/requirements.txt --use-deprecated=legacy-resolver`.
 
 This application uses google and yandex. You should register your application in services
 - [Google](https://console.cloud.google.com/projectcreate?previousPage=%2Fprojectselector2%2Fgoogle%2Fmaps-apis%2Fcredentials%3F_ga%3D2.155322681.388134049.1644719244-2008333952.1644499982)
