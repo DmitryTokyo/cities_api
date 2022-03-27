@@ -62,13 +62,18 @@ where:
 
 ### Endpoints
 
-- *Create city* - `POST /cities` Content type `application/json`. Required parameters "title" (city name).
-- *All cities list* - `GET /cities`. Content type `application/json`.
-- *Filter city by distance* - `GET /cities` Content type `application/json`. Query parameters: **lat**=, **lon**=. Data should 
-pass as float number
-- *Fetch city* - `GET /cities/{city_id}`. Content type `application/json`. Parameter: **city_id**
-- *Delete city* - `DELETE /cities/{city_id}`. Content type `application/json`. Parameter: **city_id**he product.
+| Endpoint name     | Endpoint | Endpoint type | Notes                                                               |
+|-------------------|----------|---------------|---------------------------------------------------------------------|
+| *Create city*     | `POST /cities` | `application/json` | Required parameters "title" (city name)                             |
+| *All cities list* | `GET /cities` | `application/json` | Query parameters: **lat**=, **lon**=. Data should pass as int or float number |
+| *Retreive city*   | `GET /cities/{city_id}` | `application/json` | Parameter: **city_id** |
+| *Delete city*   | `DELETE /cities/{city_id}` | `application/json` | Parameter: **city_id** |
 
+### Swagger schema
+
+You can find swagger schema by url: `http://127.0.0.1:8000/api/schema/swagger-ui`
+
+![Swagger](cities/media/api_schema_screenshot.png)
 ## License
 
 You can copy, distribute and modify the software.
