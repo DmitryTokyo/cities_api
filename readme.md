@@ -18,8 +18,9 @@ Declare default environment variables in .env file. Read more in [django-environ
 - GOOGLE_API_KEY - Google map api key [Google create APi Key](https://console.cloud.google.com/google/maps-apis)
 - GOOGLE_ELEVATION_API_KEY - Google map elevation api key [Google create APi Key](https://console.cloud.google.com/google/maps-apis)
 - YANDEX_API_KEY - Yandex api key [Yandex create api key](https://yandex.com/dev/maps/geocoder/?from=mapsapi)
+- ALLOW_HOST - allow application hosts
 
-## How to use
+## How to use in local
 Before run the application it recommends installing the virtual environment. In the Linux it can be doing like this:
 ```sh
 python3 -m venv venv
@@ -45,6 +46,20 @@ You can check project using flake8
 make style
 ```
 
+## How to run in Docker
+
+You have to installed [docker](https://docs.docker.com/) on your machine.
+
+1. You need to bild docker image:
+```bash
+docker build -t cities_app .
+```
+2. You need to launch application by run the docker container by command
+```shell
+docker run --env-file .env -p 8000:8000 cities_app
+```
+
+
 ## API Reference:
 
 ### URL Syntax
@@ -54,9 +69,14 @@ Cities application provides follow syntax of url (before deploy all examples bas
 http://127.0.0.1:8000/api/v1/cities/<pk>[?<parameter=value>&<parameter=value>]
 ```
 
+or if launch in docker:
+
+```shell
+http://0.0.0.0:8000/api/v1/cities/<pk>[?<parameter=value>&<parameter=value>]
+```
 where:
 
-- `http://127.0.0.1:8000/api/v1/cities/` - base url for access cities REST API resources.
+- `api/v1/cities/` - base url for access cities REST API resources.
 - `pk` - id of city object in database.
 - `[?<parameter=value>&<parameter=value>]` - query parameters for filtering cities query.
 
@@ -71,7 +91,15 @@ where:
 
 ### Swagger schema
 
-You can find swagger schema by url: `http://127.0.0.1:8000/api/schema/swagger-ui`
+You can find swagger schema by url: 
+```shell
+http://127.0.0.1:8000/api/schema/swagger-ui
+```
+
+or if launch in docker:
+```shell
+http://0.0.0.0:8000/api/schema/swagger-ui
+```
 
 ![Swagger](cities/media/api_schema_screenshot.png)
 ## License
