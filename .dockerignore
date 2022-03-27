@@ -1,0 +1,8 @@
+.*
+!.coveragerc
+!.env
+.git
+*/media
+.pytest_cache
+*.sqlite
+.idea
